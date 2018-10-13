@@ -36,4 +36,3 @@ FileETag MTime Size
 #AuthUserFile /path/to/.htpasswd #create one with htpasswd -c .htpasswd username
 #Require user username
 
-AddHandler php5-fastcgi .php .php5
