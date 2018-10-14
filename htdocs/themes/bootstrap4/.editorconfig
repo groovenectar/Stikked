@@ -1,0 +1,11 @@
+# Top-most EditorConfig file
+root = true
+
+# Project root / defaults
+[*]
+charset = utf-8
+# Unix-stlye line endings
+end_of_line = lf
+indent_style = tab
+indent_size = 2
+insert_final_newline = true
