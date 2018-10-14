@@ -14,7 +14,7 @@ if(isset($ace_modes)){
 }
 ?>
 
-<script type="text/javascript" src="<?php echo base_url();?>js/main.js" ></script>
+<script type="text/javascript" src="<?php echo base_url();?>themes/bootstrap4/js/main.min.js" ></script>
 
 <?php if(config_item('js_editor') == 'codemirror') : ?>
 <script type="text/javascript" src="<?php echo base_url();?>themes/bootstrap4/codemirror/lib/codemirror.js" ></script>

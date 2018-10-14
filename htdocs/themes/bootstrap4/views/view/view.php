@@ -31,10 +31,10 @@ if(isset($insert)){
 				</div>
 <?php if($seg3 != 'diff'){ ?>
     <?php if(isset($inreply)){ ?>
-            - <a href="<?php echo $url . '/diff'; ?>"><?php echo lang('paste_viewdiff'); ?></a>
+            <a href="<?php echo $url . '/diff'; ?>"><?php echo lang('paste_viewdiff'); ?></a>
     <?php }?>
 <?php }else{ ?>
-            - <a href="<?php echo $url; ?>"><?php echo lang('paste_goback'); ?></a>
+            <a href="<?php echo $url; ?>"><?php echo lang('paste_goback'); ?></a>
 <?php }?>
 					<div class="detail"><span class="item"><?php echo lang('paste_url'); ?> </span><a href="<?php echo $url; ?>"><?php echo $url; ?></a></div>
 					<?php if(!empty($snipurl)){?>
@@ -55,10 +55,10 @@ if(isset($insert)){
 	</div>
 </section>
 
-<section>
+<section class="highlighted-code">
 	<div class="row">
-		<div class="col-sm-12">
-			<blockquote class="CodeMirror"><?php echo $paste; ?></blockquote>
+		<div class="col-sm-12 card">
+			<blockquote class="CodeMirror card-body m-0"><?php echo $paste; ?></blockquote>
 		</div>
 	</div>
 </section>

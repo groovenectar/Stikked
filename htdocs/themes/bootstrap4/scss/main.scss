@@ -10,3 +10,12 @@
 		font-size: $font-size-sm;
 	}
 }
+
+.highlighted-code {
+	.card {
+		background-color: #f5f5f5;
+	}
+	ol {
+		margin: 0;
+	}
+}
