@@ -1,6 +1,9 @@
 RewriteEngine on
 #RewriteBase /
-RewriteCond $1 !^(index\.php|\.well-known|static|favicon\.ico|robots\.txt|sitemap.xml|google(.+)\.html)
+# Ensure that we are not rewriting existing files, directories, or links
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
 
 # basic auth for PHP with fastcgi
