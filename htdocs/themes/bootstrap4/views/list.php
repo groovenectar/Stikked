@@ -10,7 +10,7 @@
 
 		<?php 
 		if(!empty($pastes)){ ?>
-			<table class="recent table table-striped table-bordered">
+			<table class="recent table table-striped table-bordered dataTable">
 				<thead>
 					<tr>
 						<th class="title"><?php echo lang('table_title'); ?></th>

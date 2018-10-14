@@ -1,12 +1,12 @@
 <?php $this->load->view("defaults/header");?>
 
 <div class="row">
-	<div class="span12">
+	<div class="col-sm-12">
 		<div class="page-header">
 			<h1>About</h1>
 		</div>
 	</div>
-	<div class="span12">
+	<div class="col-sm-12">
 	<p>Stikked is an Open-Source PHP Pastebin, with the aim of keeping a simple and easy to use user interface.</p>
     <p>Stikked allows you to easily share code with anyone you wish. Here are some features:</p>
 

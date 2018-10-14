@@ -13,9 +13,9 @@ $page_title .= $this->config->item('site_name');
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $page_title; ?></title>
 		<link rel="shortcut icon" href="<?php echo base_url() . 'favicon.ico'; ?>" />
+		<link rel="stylesheet" href="<?php echo base_url();?>themes/bootstrap4/css/main.min.css">
 <?php
-
-//Carabiner
+/*//Carabiner
 $this->carabiner->config(array(
     'script_dir' => 'themes/bootstrap/js/',
     'style_dir'  => 'themes/bootstrap/css/',
@@ -31,7 +31,7 @@ $this->carabiner->css('bootstrap-responsive.css');
 $this->carabiner->css('style.css');
 $this->carabiner->css('codemirror.css');
 
-$this->carabiner->display('css'); 
+$this->carabiner->display('css');*/
 
 $searchparams = ($this->input->get('search') ? '?search=' . $this->input->get('search') : '');
 
@@ -44,35 +44,51 @@ $searchparams = ($this->input->get('search') ? '?search=' . $this->input->get('s
 	</head>
 	<body>		
 		<header>
-			<div class="navbar navbar-fixed-top">
-				<div class="navbar-inner">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 					<div class="container">
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-						<a class="brand title" href="<?php echo base_url(); ?>"><?php echo $this->config->item('site_name'); ?></a>
-						<div class="nav-collapse">
-							<ul class="nav">
+						<a class="navbar-brand brand title" href="<?php echo base_url(); ?>"><?php echo $this->config->item('site_name'); ?></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav ml-auto">
 								<?php $l = $this->uri->segment(1)?>
-								<li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?php echo base_url(); ?>" title="<?php echo lang('menu_create_title'); ?>"><?php echo lang('menu_create'); ?></a></li>
+								<li class="nav-item <?php if($l == ""){ echo ' active'; }?>">
+									<a href="<?php echo base_url(); ?>" class="nav-link" title="<?php echo lang('menu_create_title'); ?>">
+										<?php echo lang('menu_create'); ?>
+									</a>
+								</li>
 <?php if(!$this->config->item('private_only')){ ?>
-								<li><a <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo 'class="active"'; }?> href="<?php echo site_url('lists') . $searchparams; ?>" title="<?php echo lang('menu_recent_title'); ?>"><?php echo lang('menu_recent'); ?></a></li>
-								<li><a <?php if($l == "trends"){ echo 'class="active"'; }?> href="<?php echo site_url('trends') . $searchparams; ?>" title="<?php echo lang('menu_trending_title'); ?>"><?php echo lang('menu_trending'); ?></a></li>
+								<li class="nav-item <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo ' active'; }?>">
+									<a href="<?php echo site_url('lists') . $searchparams; ?>" class="nav-link" title="<?php echo lang('menu_recent_title'); ?>">
+										<?php echo lang('menu_recent'); ?>
+									</a>
+								</li>
+								<li class="nav-item <?php if($l == "trends"){ echo ' active'; }?>">
+									<a href="<?php echo site_url('trends') . $searchparams; ?>" class="nav-link" title="<?php echo lang('menu_trending_title'); ?>">
+										<?php echo lang('menu_trending'); ?>
+									</a>
+								</li>
 <?php } ?>
 <?php if(! $this->config->item('disable_api')){ ?>
-								<li><a  <?php if($l == "api"){ echo 'class="active"'; }?> href="<?php echo site_url('api'); ?>" title="<?php echo lang('menu_api'); ?>"><?php echo lang('menu_api'); ?></a></li>
+								<li class="nav-item <?php if($l == "api"){ echo ' active'; }?>">
+									<a href="<?php echo site_url('api'); ?>" class="nav-link" title="<?php echo lang('menu_api'); ?>">
+										<?php echo lang('menu_api'); ?>
+									</a>
+								</li>
 <?php } ?>
-								<li><a  <?php if($l == "about"){ echo 'class="active"'; }?> href="<?php echo site_url('about'); ?>" title="<?php echo lang('menu_about'); ?>"><?php echo lang('menu_about'); ?></a></li>
+								<li class="nav-item <?php if($l == "about"){ echo ' active'; }?>">
+									<a href="<?php echo site_url('about'); ?>" class="nav-link" title="<?php echo lang('menu_about'); ?>">
+										<?php echo lang('menu_about'); ?>
+									</a>
+								</li>
 							</ul>
 						</div>
-					</div>
 				</div>
-			</div>
+			</nav>
 		</header>
 
-		<div class="container">
+		<div class="container pt-5">
 				<?php if(isset($status_message)){?>
 				<div class="message success change">
 					<div class="container">

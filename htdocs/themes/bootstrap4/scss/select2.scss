@@ -1,0 +1,9 @@
+$input-height: $input-height-sm;
+$input-height-inner: $input-height-inner-sm;
+$input-border-radius: $input-border-radius-sm;
+
+@import "select2-bootstrap4/layout";
+
+.select2-dropdown {
+	font-size: $font-size-sm;
+}

@@ -15,6 +15,11 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
   integrity sha512-yprFYuno9FtNsSHVlSWd+nRlmGoAbqbeCwOryP6sC/zoCjhpArcRMYp19EvpSUSizJAlsXEwJv+wcWS9XaXdMw==
 
+"@ttskch/select2-bootstrap4-theme@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@ttskch/select2-bootstrap4-theme/-/select2-bootstrap4-theme-1.0.4.tgz#d823d02b6a611b8dfd36f21a57c9f2abe4a1679c"
+  integrity sha512-1cFGzAHTPw/c3KXMhuq6/aV+fLAwbmlUPtX43TmQcq3SCDvqPCrSFO80YEf5KEneYuiJMHKv+lPGWAlh4szpUQ==
+
 "@types/node@^10.11.7":
   version "10.11.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.7.tgz#0e75ca9357d646ca754016ca1d68a127ad7e7300"
@@ -38,12 +43,10 @@ accepts@~1.3.4:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-ace-code-editor@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/ace-code-editor/-/ace-code-editor-1.2.3.tgz#a65a533879d6e0f9fdb5e712d2ee46b2079a51de"
-  integrity sha1-plpTOHnW4Pn9tecS0u5GsgeaUd4=
-  dependencies:
-    mime "1.2.x"
+ace-builds@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.4.1.tgz#a66e33bcd519918ee99bc54cac5d7399a83c8ff2"
+  integrity sha512-ulsfTOi/oAXBIt9hYlK4asyFZYsFOOUAbwBZidbjWWJycRX4LtwIithMyndcnoQ4PavkZ0iGJ+c9nqHNiYbubA==
 
 after@0.8.2:
   version "0.8.2"
@@ -2538,11 +2541,6 @@ mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.19:
   integrity sha512-HrkrPaP9vGuWbLK1B1FfgAkbqNjIuy4eHlIYnFi7kamZyLLrGlo2mpcx0bBmNpKqBtYtAfGbodDddIgddSJC2A==
   dependencies:
     mime-db "~1.36.0"
-
-mime@1.2.x:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-1.2.11.tgz#58203eed86e3a5ef17aed2b7d9ebd47f0a60dd10"
-  integrity sha1-WCA+7Ybjpe8XrtK32evUfwpg3RA=
 
 mime@1.4.1:
   version "1.4.1"

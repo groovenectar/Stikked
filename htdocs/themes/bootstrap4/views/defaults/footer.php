@@ -1,5 +1,5 @@
-			<?php $this->load->view('defaults/footer_message'); ?>
-		</div>
+	<?php $this->load->view('defaults/footer_message'); ?>
+</div>
 <?php
 
 //stats
@@ -15,7 +15,20 @@ if(isset($ace_modes)){
     echo '<div style="display: none;" id="ace_modes">' . json_encode($ace_modes) . '</div>';
 }
 
-//Javascript
+?>
+
+<script type="text/javascript" src="<?php echo base_url();?>themes/bootstrap4/js/main.min.js" ></script>
+
+<?php if(config_item('js_editor') == 'codemirror') : ?>
+<script type="text/javascript" src="<?php echo base_url();?>themes/bootstrap4/codemirror/lib/codemirror.js" ></script>
+<?php endif ?>
+
+<?php if(config_item('js_editor') == 'ace') : ?>
+<script type="text/javascript" src="<?php echo base_url();?>themes/bootstrap4/lib/ace/ace.js" ></script>
+<?php endif ?>
+
+<?php
+/*//Javascript
 $this->carabiner->js('jquery.js');
 $this->carabiner->js('jquery.timers.js');
 $this->carabiner->js('jquery-ui-selectable-combined.min.js');
@@ -33,8 +46,7 @@ if(config_item('js_editor') == 'ace') {
 }
 $this->carabiner->js('stikked.js');
 
-$this->carabiner->display('js');
-
+$this->carabiner->display('js');*/
 ?>
 	</body>
 </html>

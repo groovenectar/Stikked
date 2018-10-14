@@ -1,2 +1,12 @@
-@import "bootstrap";
-@import "style";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/variables";
+@import "../lib/datatables/css/dataTables.bootstrap4.css";
+@import "../node_modules/select2/src/scss/core";
+@import "select2.scss";
+@import "stikked";
+
+.paste-main {
+	.meta {
+		font-size: $font-size-sm;
+	}
+}

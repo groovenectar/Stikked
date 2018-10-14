@@ -1,7 +1,7 @@
 <?php echo validation_errors(); ?>
 
-<div class="row">
-	<div class="span12">
+<div class="row paste-main">
+	<div class="col-sm-12">
 		<div class="page-header">
 			<h1><?php if(!isset($page['title'])){ ?>
 			<?php echo lang('paste_create_new'); ?>
@@ -11,43 +11,53 @@
 			</h1>
 		</div>
 	</div>
-	<div class="span12">
-		<form action="<?php echo base_url(); ?>" method="post" class="form-vertical well">
-			<div class="row">
-				<div class="span3">
-					<label for="name"><?php echo lang('paste_author'); ?>
-					</label>
-					<?php $set = array('name' => 'name', 'id' => 'name', 'class' => 'span3', 'value' => $name_set, 'maxlength' => '32', 'tabindex' => '1');
-					echo form_input($set);?>
+	<div class="col-sm-12">
+		<form action="<?php echo base_url(); ?>" method="post" class="form-vertical">
+			<div class="card"><div class="card-body">
+			<div class="row meta">
+				<div class="col-md-4">
+					<div class="form-group row">
+						<label for="name" class="text-right col-sm-3 col-form-label col-form-label-sm"><?php echo lang('paste_author'); ?></label>
+						<div class="col-sm-9">
+							<?php
+							$set = array('name' => 'name', 'id' => 'name', 'class' => 'form-control form-control-sm w-100', 'value' => $name_set, 'maxlength' => '32', 'tabindex' => '1');
+							echo form_input($set);
+							?>
+						</div>
+					</div>
 				</div>
-				<div class="span3">
-					<label for="title">
-						<?php echo lang('paste_title'); ?>
-					</label>
-					<input value="<?php if(isset($title_set)){ echo $title_set; }?>" class="span3" type="text" id="title" name="title" tabindex="2" maxlength="50" />
+				<div class="col-md-4">
+					<div class="form-group row">
+						<label for="name" class="text-right col-sm-3 col-form-label col-form-label-sm"><?php echo lang('paste_title'); ?></label>
+						<div class="col-sm-9">
+							<input value="<?php if(isset($title_set)){ echo $title_set; }?>" class="form-control form-control-sm w-100" type="text" id="title" name="title" tabindex="2" maxlength="50" />
+						</div>
+					</div>
 				</div>
-				<div class="span3">
-					<label for="lang">
-						<?php echo lang('paste_lang'); ?>
-					</label>
-					<?php $lang_extra = 'id="lang" class="select span3" tabindex="3"'; echo form_dropdown('lang', $languages, $lang_set, $lang_extra); ?>
+				<div class="col-md-4">
+					<div class="form-group row">
+						<label for="name" class="text-right col-sm-3 col-md-4 col-form-label col-form-label-sm"><?php echo lang('paste_lang'); ?></label>
+						<div class="col-sm-9 col-md-8">
+							<?php $lang_extra = 'id="lang" class="form-control form-control-sm select w-100" tabindex="3"'; echo form_dropdown('lang', $languages, $lang_set, $lang_extra); ?>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span12">
+				<div class="col-sm-12">
 					<label for="code"><?php echo lang('paste_yourpaste'); ?>
 						<span class="instruction"> - <?php echo lang('paste_yourpaste_desc'); ?></span>
 					</label>
 				</div>
 			</div>
-			<div class="control-group">
+			<div class="control-group mb-3">
 				<div class="controls">
-					<textarea id="code" class="span12" name="code" rows="20" tabindex="4"><?php if(isset($paste_set)){ echo $paste_set; }?></textarea>
+					<textarea id="code" class="col-sm-12" name="code" rows="20" tabindex="4"><?php if(isset($paste_set)){ echo $paste_set; }?></textarea>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="span8">
+				<div class="col-sm-8">
 					<div class="control-group">
 						<div class="controls">
 							<label class="checkbox">
@@ -119,7 +129,7 @@
 			</div>
 		<?php } ?>
 			<div class="form-actions">
-				<button type="submit" name="submit" value="submit" class="btn-large btn-primary">
+				<button type="submit" name="submit" value="submit" class="btn btn-primary">
 					<i class="icon-pencil icon-white"></i>
 					<?php echo lang('paste_create'); ?>
 				</button>
@@ -131,6 +141,8 @@
 					}
 				}
 				?>
+			</div>
+				</div>
 			</div>
 		</form>
 	</div>

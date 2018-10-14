@@ -1,7 +1,9 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./assembly_x86.snippets");
-exports.scope = "assembly_x86";
-
-});
+define("ace/snippets/assembly_x86",["require","exports","module"],function(e,t,n){"use strict";t.snippetText="",t.scope="assembly_x86"});
+                (function() {
+                    window.require(["ace/snippets/assembly_x86"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

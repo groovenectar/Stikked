@@ -1,12 +1,12 @@
 <?php $this->load->view("defaults/header");?>
 
 <div class="row">
-	<div class="span12">
+	<div class="col-sm-12">
 		<div class="page-header">
 			<h1>API</h1>
 		</div>
 	</div>
-	<div class="span12">
+	<div class="col-sm-12">
 	    <p class="explain border">Create pastes from the commandline</p>
 
         <h2>API URL</h2>
